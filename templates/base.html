@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Your Place</title>
+    <link rel="stylesheet" href="{% static 'css/yourplace.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'js/bootstrap-icons.json' %}">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .img1 {
+            width: 400px;
+            height: 400px;
+        }
+
+        h6 {
+            color: darkgoldenrod;
+        }
+
+        p{
+            color:rgb(240,174,21);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card_modify {
+            width: 100%;
+            height: 100%;
+        }
+
+        #mindful_1 {
+            background-image: url("http://www.trayanaturalhealth.com/wp-content/uploads/2018/01/yoga.jpeg");
+            background-position: cover;
+            background-repeat: no-repeat;
+            background-size: 1400px 1000px;
+
+        }
+
+        #home {
+            background-image: url("https://www.washingtonpost.com/resizer/4tC8vQjBZXj3AT1GBaXi3AbFPGQ=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/7VGD6HYYOVFNRLAQ3P2KQXZ2QQ.jpg");
+            background-position: cover;
+            background-repeat: no-repeat;
+            background-size: 1400px 1000px;
+
+        }
+
+        #exercises {
+            background-image: url("https://static.sportzbusiness.com/uploads/2020/07/Aerobic-Exercise.jpg");
+            background-position: cover;
+            background-repeat: no-repeat;
+            background-size: 1400px 1000px;
+
+        }
+
+        #recipes {
+            background-image: url("https://images.creativemarket.com/0.1.0/ps/1284923/1360/906/m1/fpnw/wm1/jkqdp16z2jmoen2sx9yy1hjiaxmjjm96tvlnymyadqphd2aw6akvks5rsgc3ekjh-.jpg?1463606365&s=a5b6ca125d01b9f7f46a9eecb31c02aa");
+            background-position: cover;
+            background-repeat: no-repeat;
+            background-size: 1400px 1000px;
+
+        }
+        .nav-link:active
+        {
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header sticky-top bg-white">
+        <nav class="navbar navbar-expand-md" style="display:flex;">
+            <a href="your_place.html">
+                <img style="width:150px;height:50px;" src="{% static 'images/yourplace.jpg' %}">
+            </a>
+            <div class="d-flex justify-content-end w-100">
+                <div style="display:flex;">
+                    <a class="nav-link text-dark" href='/'>
+                        Home
+                    </a>
+                    <a class="nav-link text-dark" href="/mindfullness">
+                        Mindfulness
+                    </a>
+                    <a class="nav-link text-dark" href="/exercises">
+                        Exercises
+                    </a>
+                    <a class="nav-link text-dark" href="/recipes">
+                        Recipes
+                    </a>
+                    {% if user.is_authenticated %}
+                    <a class="nav-link text-dark" href="/yourbmi">
+                        Your BMI
+                    </a>
+                    {% endif %}
+
+                </div>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        {% if user.is_authenticated %}
+                        <li class="nav-item text-dark">
+                            <a class="nav-link" href="/">
+                                Hello, {{user.first_name}}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="logout">
+                                Logout
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="signup">
+                                Signup
+                            </a>
+                        </li>
+                        <div class="nav-vl"></div>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="login">
+                                Login
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    {% block content %}
+
+    {% endblock %}
+    <div class="container5" style="display:block;">
+        <h1 class="bottom_head">Self care isn't selfish!!</h1>
+        <hr />
+        <p class="bottom_content">Join the revolution in defeating depression</p>
+        <hr />
+        <p class="bottom_content2">Copyright-Your Place</p>
+        <hr />
+    </div>
+</body>
+
+</html>

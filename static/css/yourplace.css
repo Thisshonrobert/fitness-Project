@@ -1,0 +1,110 @@
+.container1
+{
+    display:flex;
+    height:100px;
+    width:100%;
+}
+.logo
+{
+    height:80%;
+}
+
+#para_cont1
+{
+    display:inline-flex;
+    justify-content: center;
+    width:30%;
+    align-items: center;
+}
+p{
+    color:rgb(240,174,21);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h6
+{
+    color:rgb(240,174,21);
+}
+
+.container3
+{
+    display:flex;
+    justify-content: center;
+}
+.insta
+{
+    height:30px;
+    width:auto;
+    border-radius: 5px;
+}
+.facebook
+{
+    height:30px;
+    width:auto;
+    border-radius: 5px;
+}
+.container5
+{
+    background-color: #222;
+    justify-content: center;
+    text-align: justify;
+    color:white;
+    padding:5px;
+    display:flex;
+}
+.bottom_head
+{
+    font-size:50px;
+    font-family: Cambria;
+    text-align: center;
+}
+.bottom_content
+{
+    font-size:10px;
+    font-family: cursive;
+}
+.con4_1
+{
+    color:rgb(255,0,0);
+    font-family: cursive;
+    display: flex;
+}
+.con4_2
+{
+    color:rgb(255,0,0);
+    font-family: cursive;
+    justify-content: center;
+    display:flex;
+}
+.new_con1
+{
+    background-image:url("https://i.pinimg.com/originals/b3/f4/ad/b3f4ad443e6c5c49dfdc6b52a6683387.jpg");
+    background-position:  cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    height:250px;
+    padding:20px;
+    position:relative;
+}
+#para
+{
+    font-family: cursive;
+    color:darkblue;
+    font-size: 20px;
+    padding: 50px;
+}
+#mindful_1
+{
+    background-image: url("https://www.kayawell.com/blog/wp-content/uploads/2019/04/Tips-To-Maintain-Health-Fitness-Goals-in-Your-Busy-Life.png");
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size:1400px 1000px;
+    height:250px;
+    padding:5%;
+    width:100%;
+
+}
+.content{
+    color:gold;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
